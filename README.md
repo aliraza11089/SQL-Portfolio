@@ -30,6 +30,12 @@ This project includes SQL queries to answer business questions using customer an
    ON inv.CustomerId = cust.CustomerId
    WHERE inv.BillingCountry = "Brazil";
 
+4. ** Which employees have the title of 'Sales Support Agent'?**
+   ```sql
+   SELECT * 
+   FROM Employees
+   WHERE Title = "Sales Support Agent";
+
 
 
 
