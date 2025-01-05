@@ -181,8 +181,8 @@ This project includes SQL queries that answer important business and sports-rela
       FROM matchs
       WHERE FTR = "A"
       GROUP BY AwayTeam)
-   GROUP BY team
-   ORDER BY percentage DESC;
+    GROUP BY team
+    ORDER BY percentage DESC;
 
 22. **How many matches has each team played, including both home and away games?**
     ```sql
