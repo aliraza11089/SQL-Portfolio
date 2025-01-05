@@ -15,12 +15,13 @@ This project includes SQL queries to answer business questions using customer an
    WHERE Country != "USA";
 
 2. Which customers are located in Brazil?
+ ```sql 
 SELECT * 
 FROM customers 
 WHERE Country = "Brazil";
 
 3. Which customers from Brazil made purchases, and what are the details of their invoices, including invoice ID, billing country, and invoice date?
-
+ ```sql
 SELECT cust.FirstName, cust.LastName, inv.InvoiceId, inv.BillingCountry, inv.InvoiceDate
 FROM invoices AS inv
 LEFT JOIN customers AS cust
