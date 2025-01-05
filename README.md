@@ -30,11 +30,35 @@ This project includes SQL queries to answer business questions using customer an
    ON inv.CustomerId = cust.CustomerId
    WHERE inv.BillingCountry = "Brazil";
 
-4. ** Which employees have the title of 'Sales Support Agent'?**
+4. **Which employees have the title of 'Sales Support Agent'?**
    ```sql
    SELECT * 
    FROM Employees
    WHERE Title = "Sales Support Agent";
+
+5. **Which distinct billing countries are listed in the invoices?**
+   ```sql
+   SELECT DISTINCT BillingCountry 
+   FROM Invoices;
+
+6. **What is the number of invoices grouped by billing country, sorted in descending order?**
+   ```sql
+   SELECT BillingCountry, COUNT(*) 
+   FROM Invoices
+   GROUP BY BillingCountry
+   ORDER BY COUNT(*) DESC;
+
+7. **How many invoices were issued between January 1, 2009, and December 31, 2009?**
+    ```sql
+    SELECT COUNT(*) 
+    FROM Invoices
+    WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31';
+
+8. **How many invoices were issued in the USA?**
+   ```sql
+   SELECT COUNT(*) 
+   FROM Invoices
+   WHERE BillingCountry = "USA";
 
 
 
